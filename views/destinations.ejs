@@ -1,0 +1,4 @@
+<%- include('partials/head') %><%- include('partials/nav') %>
+<section class="page-hero"><div class="wrap"><div class="eyebrow light-eyebrow">THERE'S MORE TO INDIA</div><h1>Explore by <em>region.</em></h1><p>Find hill stations, heritage cities, beaches, islands, wildlife and meaningful journeys.</p><div class="breadcrumbs"><a href="/">Home</a> / Destinations</div></div></section>
+<section class="section wrap"><div class="destination-grid destination-grid-all"><% destinations.forEach((d,i)=>{ %><a class="destination-card" href="/destinations/<%= d.slug %>"><img src="<%= d.image %>" alt="<%= d.name %>" loading="lazy"><span class="destination-shade"></span><span class="destination-index"><%= String(i+1).padStart(2,'0') %> / <%= d.region.toUpperCase() %></span><div class="destination-info"><h3><%= d.name %></h3><p><%= d.summary %></p><span>Explore region ↗</span></div></a><% }) %></div></section>
+<%- include('partials/footer') %>

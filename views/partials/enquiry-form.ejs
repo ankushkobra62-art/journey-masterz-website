@@ -1,0 +1,9 @@
+<form class="enquiry-form" action="/enquiries" method="post">
+  <input type="hidden" name="destination" value="<%= typeof destination !== 'undefined' ? destination : '' %>">
+  <div class="form-row"><label>Your name *<input name="name" autocomplete="name" required maxlength="120" placeholder="Full name"></label><label>Phone number *<input name="phone" autocomplete="tel" required maxlength="40" placeholder="+91"></label></div>
+  <div class="form-row"><label>Email (optional)<input type="email" name="email" autocomplete="email" maxlength="160" placeholder="you@example.com"></label><label>Preferred travel date<input type="date" name="travel_date"></label></div>
+  <label>Travellers / group size<input name="travellers" maxlength="50" placeholder="e.g. 2 adults, 1 child"></label>
+  <label>Tell us what you have in mind<textarea name="message" rows="4" maxlength="3000" placeholder="Destinations, duration, interests or any special requirements"></textarea></label>
+  <button class="btn btn-primary btn-wide" type="submit">Request a travel quote <span>↗</span></button>
+  <p class="form-note">Enquiry only. No online payment is collected on this website.</p>
+</form>

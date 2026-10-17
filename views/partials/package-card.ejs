@@ -1,0 +1,4 @@
+<article class="package-card">
+  <a class="card-image" href="/packages/<%= p.slug %>"><img src="<%= p.image || 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80' %>" alt="<%= p.title %>" loading="lazy"><span class="image-tag"><%= p.category %></span></a>
+  <div class="card-body"><div class="eyebrow"><span>⌁ <%= p.destination %></span><span>◷ <%= p.duration || 'Flexible' %></span></div><h3><a href="/packages/<%= p.slug %>"><%= p.title %></a></h3><p><%= p.summary %></p><div class="card-bottom"><span class="price-label"><%= p.price ? 'From ₹'+p.price : 'Custom quote' %></span><a class="arrow-link" href="/packages/<%= p.slug %>" aria-label="View <%= p.title %>">↗</a></div></div>
+</article>
